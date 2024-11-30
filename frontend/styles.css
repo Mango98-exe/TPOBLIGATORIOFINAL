@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para el header y navbar */
+header {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b16dff; /* Tonalidad violeta */
+    margin-right: 40px;
+    transition: color 0.3s ease; /* Transición para el logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative; /* Para el efecto de subrayado */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative; /* Para el subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+header nav ul li a:hover {
+    color: #b16dff; /* Cambia el color a violeta al hacer hover */
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Poner el subrayado debajo del texto */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #b16dff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; /* Efecto de subrayado */
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1); /* Muestra el subrayado al hacer hover */
+    transform-origin: bottom left;
+}
+
+header nav ul li a:hover {
+    color: #9a4db7; /* Color ligeramente diferente para mayor contraste */
+}
+
+/*carrito*/
+.cart-icon {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    position: relative; /* Para mostrar el contador de artículos */
+}
+
+.cart-icon .fas {
+    margin-right: 20px; /* Separación entre el ícono y el contador */
+}
+
+.cart-count {
+    background-color: #b16dff; /* Tonalidad violeta */
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* Hover en el carrito */
+.cart-icon:hover {
+    color: #9a4db7; /* Color más oscuro al hacer hover */
+}
+
+.hero {
+    background-color: #1a1a1a;
+    color: #b16dff; /* Tonalidad violeta */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 20px; /* Añadido para separación entre productos */
+}
+
+.product-card {
+    background-color: #333;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.product-card .price {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #b16dff; /* Tonalidad violeta */
+}
+
+.product-card button {
+    background-color: #b16dff; /* Tonalidad violeta */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background-color: #9a4db7;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el ratón */
+}
+
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+}
